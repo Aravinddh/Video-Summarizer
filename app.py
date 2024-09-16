@@ -21,5 +21,3 @@ def process_video():
 
 if __name__ == '__main__':
     app.run(debug=False)
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
