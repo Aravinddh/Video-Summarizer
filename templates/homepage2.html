@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Summarizer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('style', filename='stylescss') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AI Video Summarizer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-light">
+        <div class="container">
+            <h1 class="display-4">Summarize YouTube Videos Instantly</h1>
+            <p class="lead">AI-powered summarization tool to extract key insights from any video</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>About the AI Video Summarizer</h2>
+            <p class="lead">
+                Our AI video summarizer utilizes state-of-the-art natural language processing techniques to provide concise summaries from long YouTube videos. Whether it's a tutorial, lecture, or vlog, our summarizer makes it easier for you to extract the most important information quickly.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Fast Summarization</h4>
+                    <p>Generate accurate summaries of any video within seconds.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>AI Powered</h4>
+                    <p>Built using advanced AI models like BERT for natural language understanding.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Seamless Integration</h4>
+                    <p>Works with any public YouTube video link for easy summarization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Summarizer Form -->
+    <section id="summarize" class="py-5 text-center">
+        <div class="container">
+            <h2>Summarize a YouTube Video</h2>
+            <form id="videoForm" method="POST" action="/process">
+                <div class="mb-3">
+                    <input type="url" name="youtube_url" class="form-control" placeholder="Enter YouTube Video URL" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Summarize</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3 text-center">
+        <p>&copy; 2024 AI Video Summarizer. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
