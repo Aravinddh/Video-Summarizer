@@ -20,4 +20,6 @@ def process_video():
     return jsonify(results)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
